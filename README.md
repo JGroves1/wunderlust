@@ -1,2 +1,2 @@
 # wunderlust
- From provided content and wireframes // HTML & CSS all original
+ From provided content and wireframes // HTML all original
