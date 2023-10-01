@@ -1,0 +1,373 @@
+/* JANESSA GROVES */
+
+/* CSS RESET BY MEYERWEB.COM */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root{
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dkGray: #222222;
+    --ltGray: #EAEAEA;
+    --white: #FFF;
+    --black: #000;
+    --molle-font: "Molle", cursive;
+    --mont-font: "Montserrat", sans-serif;
+    font-size: 14px;
+}
+
+/* BODY/GLOBAL */
+h1, h2, h3 {
+    font-family: var(--molle-font);
+}
+
+h4, p, q, a, small, nav, button, form {
+    font-family: var(--mont-font);
+}
+
+h1 {
+    font-size: 3.5em;
+    padding-top: 0.5em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2.5em;
+    margin-top: 1em;
+}
+
+h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+/* SKIP LINK */
+#skip{
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+#skip:focus  {
+	position: static;
+	width: auto;
+	height: auto;
+}
+
+/* HEADER */
+header {
+    background-image: linear-gradient(
+        to bottom,
+        var(--teal) 0%,  
+        var(--white) 100%
+        );
+
+    padding: 0 2em;
+}
+
+#logo img {
+    width: 12em;
+}
+
+header p {
+    font-size: 1.25em;
+}
+
+    /* NAV */
+    nav {
+        position: absolute;
+        display: block;
+        top: 1em;
+        right: 0px;
+        width: 12em;
+    }
+
+    nav ul {
+        list-style: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: none;
+    }
+
+    nav:hover ul {
+        display: block;
+        width: 100%;
+        margin: 1.25em 0;
+    }
+
+    nav:hover {
+        width: 100%;
+    }
+
+    nav a { 
+        text-decoration: none;
+        color: var(--black);
+        background-color: var(--teal);
+        display: block;
+        padding: 1.5em;
+    }
+
+    #menu-toggle {
+        color: var(--black);
+        background-color: var(--yellow);
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        padding: 1.25em 0;
+    }
+
+    #menu-toggle:hover {
+        color: var(--white);
+        background-color: var(--dkGray);
+        padding-bottom: 0;
+    }
+
+    #toggle {
+        display: none;
+    }
+
+/* MAIN */
+
+    /* INTRO */
+    #intro h2, #intro p {
+        padding: 10px 28px;
+    }
+
+    #img-grid {
+        display: grid;
+        row-gap: 1em;
+    }
+
+    #intro img {
+        width: 100%;
+    }
+
+    /* PLAN */
+    #plan {
+        background-color: var(--yellow);
+        padding: 2em;
+    }
+
+    #plan div {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        justify-content: center;
+    }
+
+    #plan section {
+        background-color: var(--teal);
+        margin: 1em;
+        border: 2px solid var(--white);
+        border-radius: 5%;
+        width: 20em;
+        height: 20em;
+        display: grid;
+        align-items: center;
+    }
+
+    #plan img {
+        width: 50%;
+        display: block;
+        margin: auto;
+    }
+
+    /* TESTIMONIALS */
+    #testimonials { 
+        padding: 2em;
+    }
+
+    /* ABOUT */
+    #about {
+        background-color: var(--blue);
+        padding: 2em;
+    }
+
+    #about img {
+        width: 20%;
+    }
+
+    #about p {
+        text-align: center;
+    }
+
+    /* CONTACT */
+    #contact {
+        padding: 1em;
+    }
+
+    fieldset, input, label, select, textarea { 
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+
+    .form-required{
+        font-family: var(--mont-font);
+        font-style: italic;
+        font-size: 0.5em;
+    }
+
+    .required {
+        color: var(--purple);
+        font-size: 1.5em;
+    }
+
+    #contact label, #contact legend {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.25em;
+        padding: 0;
+    }
+
+    input::placeholder {
+        font-size: 1em;
+        color: var(black);
+    }
+     
+
+    input, select {
+        border: 3px solid var(--purple);
+        height: 2.5em;
+        font-family: var(--mont-font);
+        font-size: 1.5em;
+        color: var(--black);
+    }
+
+    #contact label, #contact legend {
+        padding-top: 1em;
+    }
+
+    .radio-label {
+        text-transform: lowercase;
+        text-transform: capitalize;
+        font-weight: 100;
+    }
+
+    #mySubmit {
+        background-color: var(--purple);
+        color: var(--white);
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.25em;
+        height: 3.5em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+/* FOOTER */
+
+footer {
+    background-color: var(--ltGray);
+}
+
+footer p, footer a {
+    display: block;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    color: var(--black);
+    padding: 1em;
+}
+
+
+/* CLASSES */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+/* ADDITIONAL IDS */
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 1920px){
+    
+}
+
+@media screen and (min-width: 768px){
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    nav a:hover {
+        background-color: var(--yellow);
+    }
+
+    #menu-toggle label {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 428px){
+
+}
+
+
+

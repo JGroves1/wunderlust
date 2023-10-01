@@ -1,0 +1,268 @@
+/* JANESSA GROVES */
+
+/* CSS RESET BY MEYERWEB.COM */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root{
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dkGray: #222222;
+    --ltGray: #EAEAEA;
+    --white: #FFF;
+    --black: #000;
+    --molle-font: "Molle", cursive;
+    --mont-font: "Montserrat", sans-serif;
+    font-size: 18px;
+}
+
+/* BODY/GLOBAL */
+body {
+    
+}
+
+h1, h2, h3 {
+    font-family: var(--molle-font);
+}
+
+h4, p, q, small, nav, button, form {
+    font-family: var(--mont-font);
+}
+
+h1 {
+    font-size: 3em;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* SKIP LINK */
+#skip{
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+#skip:focus  {
+	position: static;
+	width: auto;
+	height: auto;
+}
+
+/* HEADER */
+header {
+    background-image: linear-gradient(
+        to bottom,
+        var(--teal) 0%, 
+        var(--teal) 35%, 
+        var(--white) 100%
+        );
+}
+
+#logo img {
+    width: 25%;
+}
+
+    /* NAV */
+    nav {
+        position: absolute;
+        display: block;
+        top: 1em;
+        right: 0px;
+        width: 12em;
+    }
+
+    nav ul {
+        list-style: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: none;
+        position: absolute;
+    }
+
+    nav:hover ul {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    nav:hover {
+        width: 100%;
+    }
+
+    nav a { 
+        text-decoration: none;
+        color: var(--black);
+        background-color: var(--teal);
+        display: block;
+        padding: 10px;
+    }
+
+    #menu-toggle {
+        color: var(--black);
+        background-color: var(--yellow);
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #menu-toggle:hover {
+        color: var(--white);
+        background-color: var(--dkGray);
+    }
+
+    #toggle {
+        display: none;
+    }
+
+/* MAIN */
+
+    /* PLAN */
+    #plan {
+        background-color: var(--yellow);
+    }
+
+    #plan section {
+        background-color: var(--teal);
+        margin: 1em;
+        border: 2px solid var(--white);
+        border-radius: 5%;
+        padding: 5%;
+        width: 75%;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    #plan img {
+        width: 40%;
+        display: block;
+        margin: auto;
+    }
+
+    /* TESTIMONIALS */
+
+    /* ABOUT */
+    #about {
+        background-color: var(--blue);
+        padding:10%;
+    }
+
+    #about img {
+        width: 20%;
+    }
+
+    #about p {
+        text-align: center;
+    }
+
+    /* CONTACT */
+
+/* FOOTER */
+
+/* CLASSES */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+/* IDS */
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 1920px){
+    
+}
+
+@media screen and (min-width: 768px){
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    nav a:hover {
+        background-color: var(--yellow);
+    }
+
+    #menu-toggle label {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 428px){
+
+}
+
+
+
