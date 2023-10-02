@@ -372,8 +372,8 @@ header p {
         margin: 0;
         font: inherit;
         color: var(--purple);
-        width: 3em;
-        height: 3em;
+        width: 4em;
+        height: 4em;
         border: 0.2em solid var(--purple);
         border-radius: 85%;
         transform: translateY(-0.1em);
@@ -385,8 +385,8 @@ header p {
 
     input[type="radio"]::before {
         content: "";
-        width: 0.5em;
-        height: 0.5em;
+        width: 0.75em;
+        height: 0.75em;
         border-radius: 85%;
         transform: scale(0);
         transition: 120ms transform ease-in-out;
@@ -398,6 +398,12 @@ header p {
       input[type="radio"]:checked::before {
         transform: scale(3.5);
       }
+
+    .radio-input {
+        display: grid;
+        grid-template-columns: 1em auto;
+        gap: 4em;
+    }
 
     /* ----- END CUSTOM RADIO ----- */
 
@@ -412,7 +418,7 @@ header p {
         /* Additional resets for further consistency */
         background-color: transparent;
         border: none;
-        width: 80%;
+        width: 90%;
         font-family: inherit;
         font-size: inherit;
         cursor: inherit;
@@ -660,13 +666,10 @@ footer p, footer a {
 
             #mySubmit {
                 width: 15em;
-                float: right;
-                margin-right: 10%;
             }
         
         /* ----- FOOTER ----- */
         footer {
-            clear: right;
             display: flex;
             padding-left: 3em;
             padding-right: 3em;
@@ -674,11 +677,11 @@ footer p, footer a {
 }
 
 @media screen and (min-width: 1024px){
-    /* ----- PLAN ----- */
-    #plan div {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
-    }
+            /* ----- PLAN ----- */
+            #plan div {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 1fr;
+            }
 }
 
 @media screen and (min-width: 1400px){
@@ -745,7 +748,7 @@ footer p, footer a {
         /* ----- CONTACT ----- */
         form {
             display: grid;
-            grid-template-columns: repeat(3, 33.33%);
+            grid-template-columns: repeat(3, 1fr);
         }
 
         #names {
@@ -758,28 +761,6 @@ footer p, footer a {
 
         #selects {
             grid-column: 3;
-        }
-        
-        #contact label { 
-            width: 90%;
-        }
-
-        input {
-            width: 90%;
-        }
-
-        .radio-input {
-            margin: 0;
-            padding: 0;
-        }
-        
-        .custom-select {
-          width: 90%;
-        }
-
-        #mySubmit {
-            width: 10em;
-            margin-right: 5%;
         }
     
     /* ----- FOOTER ----- */

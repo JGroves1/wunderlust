@@ -65,10 +65,6 @@ table {
 }
 
 /* ----- BODY/GLOBAL ----- */
-html {
-    width: 100%; 
-}
-
 h1, h2, h3 {
     font-family: var(--molle-font);
 }
@@ -139,55 +135,51 @@ header p {
     /* ----- NAV ----- */
     nav {
         display: block;
-        margin: 0;
-        padding: 0;
+         position: absolute;
+       top: 1em;
+        right: 0px;
+        width: 12em;
+    }
+
+    nav ul {
+        list-style: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: none;
+    }
+
+    nav:hover ul {
+        display: block;
+        width: 100%;
+        margin: 1.25em 0;
+    }
+
+    nav:hover {
+        width: 100%;
     }
 
     nav a { 
         text-decoration: none;
         color: var(--black);
         background-color: var(--teal);
-        border: 1px solid var(--dkGray);
         display: block;
-        padding: 2.5em;
+        padding: 1.5em;
     }
 
     #menu-toggle {
+        color: var(--black);
+        background-color: var(--yellow);
         text-transform: uppercase;
         font-weight: bold;
         text-decoration: none;
         text-align: center;
-        padding: 0;
+        padding: 1.25em 0;
     }
 
-    #menu-toggle label {
-        position: absolute;
-        top: 2em;
-        right: 0;
-        width: 12em;
-        padding: 1.25em;
-        color: var(--black);
-        background-color: var(--yellow);
-    }
-
-    #menu-toggle input[name="toggle"]:checked ~ label {
+    #menu-toggle:hover {
         color: var(--white);
         background-color: var(--dkGray);
-        padding: 1.25em;
-        width: 100%;
-    }
-
-    nav ul {
-        width: 100%;
-        display: none;
-        position: absolute;
-        top: 5.5em;
-        right:0;
-    }
-
-    input[name="toggle"]:checked ~ ul, input[name="toggle"]:checked ~ label {
-        display: flex;
-        flex-direction: column;
+        padding-bottom: 0;
     }
 
     #toggle {
@@ -372,8 +364,8 @@ header p {
         margin: 0;
         font: inherit;
         color: var(--purple);
-        width: 3em;
-        height: 3em;
+        width: 4em;
+        height: 4em;
         border: 0.2em solid var(--purple);
         border-radius: 85%;
         transform: translateY(-0.1em);
@@ -385,8 +377,8 @@ header p {
 
     input[type="radio"]::before {
         content: "";
-        width: 0.5em;
-        height: 0.5em;
+        width: 0.75em;
+        height: 0.75em;
         border-radius: 85%;
         transform: scale(0);
         transition: 120ms transform ease-in-out;
@@ -398,6 +390,12 @@ header p {
       input[type="radio"]:checked::before {
         transform: scale(3.5);
       }
+
+    .radio-input {
+        display: grid;
+        grid-template-columns: 1em auto;
+        gap: 4em;
+    }
 
     /* ----- END CUSTOM RADIO ----- */
 
@@ -412,7 +410,7 @@ header p {
         /* Additional resets for further consistency */
         background-color: transparent;
         border: none;
-        width: 80%;
+        width: 90%;
         font-family: inherit;
         font-size: inherit;
         cursor: inherit;
@@ -510,8 +508,7 @@ footer p, footer a {
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 2fr 1fr;
-        padding: 1em 3em;
-        align-items: center;
+        padding-bottom: 2.5em;
     }
 
     header h1, header p {
@@ -520,8 +517,7 @@ footer p, footer a {
     }
 
     header p {
-        padding-top: 6em;
-        padding-right: 1em;
+        padding: 5em 0 0;
     }
 
     #logo img {
@@ -531,8 +527,9 @@ footer p, footer a {
     
         /* ----- NAV ----- */   
             nav {
+                position: relative;
+                width: 100%;
                 grid-column: 1 / -1;
-                padding: 1em 2em;
             }
             
             #menu-toggle {
@@ -544,16 +541,24 @@ footer p, footer a {
             nav ul {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
-                gap: 0.75em;
+                gap: 1em;
+                margin: 0 3em;
                 padding: 0;
                 background-color: transparent;
-                position: static;
+            }
+
+            nav ul:hover {
+                display: grid;
+                margin: 0;
+                padding: 0;
+            }
+
+            #menu-toggle:hover {
+                background-color: transparent;
             }
 
             nav a {
                 background-color: var(--white);
-                border: none;
-                padding: 1.5em;
             }
 
             nav a:hover {
@@ -564,7 +569,7 @@ footer p, footer a {
                 background-color: var(--yellow);
             }
 
-            #toggle, #menu-toggle label {
+            #toggle, label[for="toggle"]{
                 display: none;
             }
 
@@ -578,10 +583,6 @@ footer p, footer a {
         }
 
             /* ----- INTRO ----- */
-            #intro {
-                padding-top: 1em;
-            }
-
             #intro h2 {
                 padding-bottom: 0;
                 padding-top: 0;
@@ -660,51 +661,19 @@ footer p, footer a {
 
             #mySubmit {
                 width: 15em;
-                float: right;
-                margin-right: 10%;
             }
         
         /* ----- FOOTER ----- */
         footer {
-            clear: right;
             display: flex;
             padding-left: 3em;
             padding-right: 3em;
         }
 }
 
-@media screen and (min-width: 1024px){
-    /* ----- PLAN ----- */
-    #plan div {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
-    }
-}
-
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1440px){
     /* ----- HEADER ----- */
-    header {
-        grid-template-columns: 1fr 4fr;
-        grid-template-rows: 1fr;
-    }
-
-    header p {
-        align-self: flex-end;
-    }
         /* ----- NAV ----- */
-        nav {
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin: 0;
-            padding: 0;
-            font-size: 1.25em
-        }
-
-        nav a {
-            padding: 0.75em 0.5em;
-        }
-
     
     /* ----- MAIN ----- */
     #intro, #plan, #testimonials, #about, #contact {
@@ -728,6 +697,12 @@ footer p, footer a {
             padding-top: 3em;
         }     
 
+        /* ----- PLAN ----- */
+        #plan div {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+        }
+
         /* ----- TESTIMONIALS ----- */
         #testimonials div {
             grid-template-columns: repeat(4, 1fr);
@@ -745,7 +720,7 @@ footer p, footer a {
         /* ----- CONTACT ----- */
         form {
             display: grid;
-            grid-template-columns: repeat(3, 33.33%);
+            grid-template-columns: repeat(3, 1fr);
         }
 
         #names {
@@ -758,28 +733,6 @@ footer p, footer a {
 
         #selects {
             grid-column: 3;
-        }
-        
-        #contact label { 
-            width: 90%;
-        }
-
-        input {
-            width: 90%;
-        }
-
-        .radio-input {
-            margin: 0;
-            padding: 0;
-        }
-        
-        .custom-select {
-          width: 90%;
-        }
-
-        #mySubmit {
-            width: 10em;
-            margin-right: 5%;
         }
     
     /* ----- FOOTER ----- */
