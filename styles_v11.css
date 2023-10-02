@@ -717,12 +717,12 @@ footer p, footer a {
 }
 
 @media screen and (min-width: 1024px){
-        /* ----- PLAN ----- */
-        #plan div {
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 1fr;
-        }
+    /* ----- PLAN ----- */
+    #plan div {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
     }
+}
 
 @media screen and (min-width: 1440px){
     /* ----- HEADER ----- */
@@ -809,46 +809,6 @@ footer p, footer a {
             grid-column: 2;
         }
         
-        /* ----- CONTACT ----- */
-        form {
-            display: grid;
-            grid-template-columns: repeat(3, 33.33%);
-            gap: 1em;
-        }
-
-        #names {
-            grid-column: 1;
-        }
-
-        #nums {
-            grid-column: 2;
-        }
-
-        #selects {
-            grid-column: 3;
-        }
-
-        .radio-input {
-            margin: 0;
-            padding: 0;
-        }
-
-        input[type="radio"] {
-            width: 1em;
-            height: 1em;
-        }
-
-        input[type="radio"]:checked::before {
-            transform: scale(0.5);
-          }
-
-        #prefEmail, #prefText, #prefPhone {
-            margin: 1.9em 0; 
-        }
-
-        #mySubmit {
-            width: 10em;
-        }
     
     /* ----- FOOTER ----- */
     footer {
@@ -867,16 +827,31 @@ footer p, footer a {
 }
 
 @media screen and (min-width: 1520px){
-    input[type="radio"] {
-        width: 3em;
-        height: 3em;
-    }
-
-    input[type="radio"]:checked::before {
-        transform: scale(3.5);
-      }
+            /* ----- CONTACT ----- */
+            form {
+                display: grid;
+                grid-template-columns: repeat(3, 33.33%);
+                gap: 1em;
+            }
     
-      #prefEmail, #prefText, #prefPhone {
-        margin: 1em 0;
-    }
+            #names {
+                grid-column: 1;
+            }
+    
+            #nums {
+                grid-column: 2;
+            }
+    
+            #selects {
+                grid-column: 3;
+            }
+    
+            .radio-input {
+                margin: 0;
+                padding: 0;
+            }
+    
+            #mySubmit {
+                width: 10em;
+            }
 }

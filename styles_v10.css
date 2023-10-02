@@ -302,12 +302,12 @@ header p {
 
     /* ----- CONTACT ----- */
     #contact {
-        padding: 2.5em;
+        padding: 1em;
     }
 
     fieldset, input, label, select, textarea { 
         display: block;
-        width: 100%;
+        width: 90%;
         margin: auto;
     }
 
@@ -340,12 +340,11 @@ header p {
         font-family: var(--mont-font);
         font-size: 1.5em;
         color: var(--black);
-        margin-bottom: 1em;
     }
 
-    /* #contact label, #contact legend {
+    #contact label, #contact legend {
         padding-top: 1em;
-    } */
+    }
 
     .radio-label {
         text-transform: lowercase;
@@ -372,6 +371,7 @@ header p {
         -webkit-appearance: none;
         appearance: none;
         background-color: var(--white);
+        margin: 0 1em;
         font: inherit;
         color: var(--purple);
         width: 3em;
@@ -404,7 +404,7 @@ header p {
     /* ----- END CUSTOM RADIO ----- */
 
     #prefEmail, #prefText, #prefPhone {
-        margin: 1em 0;
+        margin: 0;
     }
 
     label[for="prefEmail"], label[for="prefText"], label[for="prefPhone"] {
@@ -424,6 +424,7 @@ header p {
         border: none;
         font-family: inherit;
         font-size: inherit;
+        margin-left: 0.4em;
         cursor: inherit;
         line-height: inherit;
         outline: none;
@@ -434,7 +435,7 @@ header p {
     }
 
     .custom-select {
-        margin: 0;
+        margin: 0 1.25em;
         border: 3px solid var(--purple);
         font-size: 1.25rem;
         cursor: pointer;
@@ -472,10 +473,6 @@ header p {
 
       #destination select {
         display: flex;
-      }
-
-      #destination, #travelTime {
-        margin: 0 1.25em;
       }
 
     /* ----- END CUSTOM SELECT ----- */ 
@@ -681,30 +678,24 @@ footer p, footer a {
 
             /* ----- CONTACT ----- */
 
-            #contact {
-                padding: 6em;
-            }
-
-            input, label, select, textarea  {
-                width: 100%;
+            fieldset, input, label, select, textarea  {
+                width: 80%;
             }
 
             fieldset {
                 display: flex;
-                justify-content: space-between;
-                width: auto;
-                margin: 0;
+                flex: 1;
             }
 
-            fieldset label {
-                width: auto;
-                margin: 0;
-                padding: 0;
+            .custom-select {
+                width: 80%;
+                margin: auto;
             }
 
             #mySubmit {
                 width: 15em;
                 float: right;
+                margin-right: 10%;
             }
         
         /* ----- FOOTER ----- */
@@ -717,14 +708,14 @@ footer p, footer a {
 }
 
 @media screen and (min-width: 1024px){
-        /* ----- PLAN ----- */
-        #plan div {
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 1fr;
-        }
+    /* ----- PLAN ----- */
+    #plan div {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
     }
+}
 
-@media screen and (min-width: 1440px){
+@media screen and (min-width: 1400px){
     /* ----- HEADER ----- */
     header {
         grid-template-columns: 1fr 5fr;
@@ -813,7 +804,6 @@ footer p, footer a {
         form {
             display: grid;
             grid-template-columns: repeat(3, 33.33%);
-            gap: 1em;
         }
 
         #names {
@@ -827,27 +817,27 @@ footer p, footer a {
         #selects {
             grid-column: 3;
         }
+        
+        #contact label { 
+            width: 90%;
+        }
+
+        input {
+            width: 90%;
+        }
 
         .radio-input {
             margin: 0;
             padding: 0;
         }
-
-        input[type="radio"] {
-            width: 1em;
-            height: 1em;
-        }
-
-        input[type="radio"]:checked::before {
-            transform: scale(0.5);
-          }
-
-        #prefEmail, #prefText, #prefPhone {
-            margin: 1.9em 0; 
+        
+        .custom-select {
+          width: 90%;
         }
 
         #mySubmit {
             width: 10em;
+            margin-right: 5%;
         }
     
     /* ----- FOOTER ----- */
@@ -866,17 +856,3 @@ footer p, footer a {
     }
 }
 
-@media screen and (min-width: 1520px){
-    input[type="radio"] {
-        width: 3em;
-        height: 3em;
-    }
-
-    input[type="radio"]:checked::before {
-        transform: scale(3.5);
-      }
-    
-      #prefEmail, #prefText, #prefPhone {
-        margin: 1em 0;
-    }
-}
