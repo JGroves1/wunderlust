@@ -1,2 +1,2 @@
 # wunderlust
- From provided content and wireframes // HTML all original
+Ongoing project for GIT 414
