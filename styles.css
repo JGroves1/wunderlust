@@ -343,7 +343,7 @@ header p {
 
     input::placeholder {
         font-size: 1em;
-        color: var(black);
+        color: var(--black);
         padding-left: 0.5em;
     }
 
